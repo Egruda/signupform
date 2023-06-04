@@ -6,13 +6,8 @@
 
 body {
     height: 100vh;
-    
     margin:0;
-    
     background-color: black;
- 
-
-    
 }
 
 .container {
@@ -26,12 +21,10 @@ body {
     background-size: cover;
     height: 100vh;
     flex:1;
-    
     display:flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 .content {
@@ -46,8 +39,6 @@ body {
     display:flex;
     flex:1;
     flex-direction: column;
-    
- 
 }
 
 .topBanner {
@@ -81,13 +72,12 @@ h1 {
 }
 
 .content {
- 
+
     font-size: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    min-width: 600px;
-    
+    min-width: 600px;    
 }
 
 .topContent {
@@ -95,14 +85,9 @@ h1 {
     flex-direction: column;
     flex:1;
     justify-content: flex-end;
-   
-    
-    
-    
 }
 
 .topContent > p {
-   
     font-weight: 550;
     font-family: sans-serif;
     margin-left: 60px;
@@ -119,7 +104,6 @@ h1 {
     min-height: 300px;
     display: flex;
     flex-direction: column;
-    
 }
 
 .midContent > * {
@@ -136,7 +120,6 @@ h1 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-
     font-size: 1.2rem;
     gap: 20px;
 }
@@ -156,18 +139,14 @@ h1 {
     font-size: 1.2rem;
     gap: 60px;
     font-size: 1rem;
- 
-  
 }
 
 .firstRowForm > div,
 .secondRowForm > div,
 .thirdRowForm > div {
     display:flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap:1px;
-
-    
 }
 
 
@@ -175,7 +154,6 @@ h1 {
 h2 {
     font-size: 1.6rem;
     font-family: sans-serif;
-    
 }
 
 input {
@@ -192,20 +170,68 @@ div > input {
     width: 200px;
     font-size: 0.9rem;
     padding: 5px;
+    border-radius: 4px;
 }
 
 div > input:focus {
-    border: 2px groove rgba(4, 81, 196, 0.781);
-    box-shadow: 3px 5px 3px rgb(211,211,211,0.5);  
+    border: 2px solid rgb(0,150,250);
+    box-shadow: 3px 5px 3px rgb(211,211,211,0.5);
+    outline: none;  
 }
 
-div > input:focus:invalid {
+
+
+div > input:not(:focus):not(:placeholder-shown):invalid {
     border: 2px groove red;
+    background-color: rgba(255, 0, 0, 0.226);
 }
 
-div > input:invalid {
-    border: 2px groove red; 
+div > input:not(:focus):not(:placeholder-shown):valid {
+    border: 2px groove green;
+    background-color: rgba(0, 128, 0, 0.233);
 }
+
+div > label {
+    position: relative;
+}
+
+div > input[type=text]:not(:focus):not(:placeholder-shown):invalid + label:after {
+    content: "A-Z, a-z, - only";
+    position:absolute;
+    top:48px;
+    left:0px;
+    color: red;
+    font-size: 0.8rem;
+}
+
+div > input[type=email]:not(:focus):not(:placeholder-shown):invalid + label:after {
+    content: "format: xxx@provider.com";
+    position:absolute;
+    top:48px;
+    left:0px;
+    color: red;
+    font-size: 0.8rem;
+}
+
+div > input[type=tel]:not(:focus):not(:placeholder-shown):invalid + label:after {
+    content: "0-9 and - only";
+    position:absolute;
+    top:48px;
+    left:0px;
+    color: red;
+    font-size: 0.8rem;
+}
+
+div > input[type=password]:not(:focus):not(:placeholder-shown):invalid + label:after {
+    content: "Must be at least 8 characters";
+    position:absolute;
+    top:48px;
+    left:0px;
+    color: red;
+    font-size: 0.8rem;
+}
+
+
 
 button {
     background-color: #596D48;
@@ -217,8 +243,6 @@ button {
     flex-grow: 0;
     margin-top: 10px;
     box-shadow: 3px 5px 3px rgb(211,211,211,0.5);
-
-    
 }
 
 .bottomContent a:visited,

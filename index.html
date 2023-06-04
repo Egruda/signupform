@@ -17,8 +17,6 @@
         <div class="bottomBanner">
             <p>Photo by <a href="">Halie West</a> on <a href="">Unsplash</a></p>
         </div>
-
-
     </div>
     <div class="content">
         <div class="topContent">
@@ -31,32 +29,33 @@
                 <div class="form">
                     <div class="firstRowForm">
                         <div class="signupFormFirstName">
+                            <input id="firstName" name="firstName" type="text" placeholder=" " pattern="[a-zA-Z\\-]+" size="30" maxlength="245" required>
                             <label for="firstName">FIRST NAME</label>
-                            <input id="firstName" name="firstName" type="text" pattern="[a-zA-Z\\-]+" size="30" maxlength="245" required>
                         </div>
                         <div class="signupFormLastName">
-                        <label for="lastName">LAST NAME</label>
-                        <input id="lastName" name="lastName" type="text" pattern="[a-zA-Z]+" size="30" maxlength="245" required>
+                            <input id="lastName" name="lastName" type="text" placeholder=" " pattern="[a-zA-Z]+" size="30" maxlength="245" required>
+                            <label for="lastName">LAST NAME</label>
                         </div>
                     </div>
                     <div class="secondRowForm"> 
                         <div class="signupFormEmail">
+                            <input id="email" name="email" type="email" placeholder=" " size="30" maxlength="245" required>
                             <label for="email">EMAIL</label>
-                            <input id="email" name="email" type="email" size="30" maxlength="245" required>
+                            
                         </div>
                         <div class="signupFormPhone">
+                            <input id="phone" name="phone" type="tel" placeholder=" " pattern="[0-9\\-]+" size="30" maxlength="245" required>
                             <label for="phone">PHONE NUMBER</label>
-                            <input id="phone" name="phone" type="tel" pattern="[0-9\\-]+" size="30" maxlength="245" required>
                         </div>
                     </div>
                     <div class="thirdRowForm">
-                        <div class="signupFormFirstName">
+                        <div class="signupFormPassword">
+                            <input id="password" class="error" name="password" placeholder=" " type="password" minlength="8" size="30" maxlength="245" required>
                             <label for="password">PASSWORD</label>
-                            <input id="password" class="error" name="password" type="password" size="30" maxlength="245" required>
                         </div>
-                        <div class="signupFormFirstName">
+                        <div id ="confirmation" class="signupFormPasswordConfirm">
+                            <input id="passwordrepeat" class="error" placeholder=" " name="passwordrepeat" minlength="8" type="password" size="30" maxlength="245" required>
                             <label for="passwordrepeat">CONFIRM PASSWORD</label>
-                            <input id="passwordrepeat" class="error" name="passwordrepeat" type="password" size="30" maxlength="245" required>
                         </div>
                     </div>
                 </div>
