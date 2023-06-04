@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sign-Up Form</title>
+</head>
+<body>
+    <div class="container">
+    <div class="banner">
+        <div class="topBanner">
+            <img id="odinLogo" src="odin-lined.png" alt="Odin Project logo">
+            <h1>ODIN</h1>
+        </div>
+        <div class="bottomBanner">
+            <p>Photo by <a href="">Halie West</a> on <a href="">Unsplash</a></p>
+        </div>
+
+
+    </div>
+    <div class="content">
+        <div class="topContent">
+            <p class="firstTopContent">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <i>now</i> to get started.</p>
+            <p class="secondTopContent">You <i>know</i> you want to.</p>
+        </div>
+        <div class="midContent">
+            <h2 class="formTitle">Let's do this!</h2>
+            <form id="signupForm" class="signupForm">
+                <div class="form">
+                    <div class="firstRowForm">
+                        <div class="signupFormFirstName">
+                            <label for="firstName">FIRST NAME</label>
+                            <input id="firstName" name="firstName" type="text" pattern="[a-zA-Z\\-]+" size="30" maxlength="245" required>
+                        </div>
+                        <div class="signupFormLastName">
+                        <label for="lastName">LAST NAME</label>
+                        <input id="lastName" name="lastName" type="text" pattern="[a-zA-Z]+" size="30" maxlength="245" required>
+                        </div>
+                    </div>
+                    <div class="secondRowForm"> 
+                        <div class="signupFormEmail">
+                            <label for="email">EMAIL</label>
+                            <input id="email" name="email" type="email" size="30" maxlength="245" required>
+                        </div>
+                        <div class="signupFormPhone">
+                            <label for="phone">PHONE NUMBER</label>
+                            <input id="phone" name="phone" type="tel" pattern="[0-9\\-]+" size="30" maxlength="245" required>
+                        </div>
+                    </div>
+                    <div class="thirdRowForm">
+                        <div class="signupFormFirstName">
+                            <label for="password">PASSWORD</label>
+                            <input id="password" class="error" name="password" type="password" size="30" maxlength="245" required>
+                        </div>
+                        <div class="signupFormFirstName">
+                            <label for="passwordrepeat">CONFIRM PASSWORD</label>
+                            <input id="passwordrepeat" class="error" name="passwordrepeat" type="password" size="30" maxlength="245" required>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="bottomContent">
+            <button>Create Account</button>
+            <p>Already have an account? <a href="">Log in</a></p>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
